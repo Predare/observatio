@@ -8,6 +8,7 @@ public class ObservatioApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ObservatioApplication.class, args);
+		String f = "Faa";
 	}
 
 }
