@@ -47,16 +47,17 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         String token = null;
         Logger logger = Logger.getLogger("TokenValidationLogger");
         for (Cookie cookie : cookies) {
-            logger.log(Level.SEVERE, "Cookie name " + cookie.getName());
+            logger.log(Level.INFO, "Cookie name: " + cookie.getName());
             if(cookie.getName().equals(JwtTokenFilter.COOKIE_NAME) ){
                 token = cookie.getValue();
-                logger.log(Level.SEVERE, "Cookie value " + cookie.getValue());
+                logger.log(Level.INFO, "Cookie value: " + cookie.getValue());
             }
             
         }
         
         //Token isn't exist
         if(token == null){
+            logger.log(Level.SEVERE, "Token isn't exist:");
             chain.doFilter(request, response);
             return;
         }
@@ -64,6 +65,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         logger.log(Level.SEVERE, jwtTokenUtil.getUsername(token) + " " + !jwtTokenUtil.validate(token));
         //Wrong token
         if (!jwtTokenUtil.validate(token)) {
+            logger.log(Level.SEVERE, "Wrong token: " + token);
             chain.doFilter(request, response);
             return;
         }

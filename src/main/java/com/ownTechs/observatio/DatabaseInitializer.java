@@ -16,9 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @Component
-public class DatabaseInitializer<UserGroupService> implements ApplicationListener<ApplicationReadyEvent> {
-
-    private final UserGroupService userGroupService;
+public class DatabaseInitializer implements ApplicationListener<ApplicationReadyEvent> {
 
     private final List<String> usernames = List.of(
             "Predare"

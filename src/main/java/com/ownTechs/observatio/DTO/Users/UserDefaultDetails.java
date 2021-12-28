@@ -1,9 +1,13 @@
 package com.ownTechs.observatio.DTO.Users;
 
+import com.ownTechs.observatio.Security.Role;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import lombok.Builder;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.Set;
 
 @Builder
 @Data
@@ -15,7 +19,7 @@ public class UserDefaultDetails implements UserDetails {
 
     private Boolean enabled;
 
-    private String authorities = "";
+    private ArrayList<Role> authorities = new ArrayList<Role>();
     
     @Override
     public boolean isAccountNonExpired() {

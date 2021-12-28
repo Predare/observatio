@@ -6,10 +6,13 @@ import com.ownTechs.observatio.DTO.Users.UserPrivateDto;
 import com.ownTechs.observatio.DTO.Users.UserPublicDto;
 import com.ownTechs.observatio.DTO.Users.UserReqistryDto;
 import com.ownTechs.observatio.Entity.User;
+import com.ownTechs.observatio.Security.Role;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+
+import java.util.ArrayList;
 
 @Data
 @RequiredArgsConstructor
@@ -61,7 +64,7 @@ public class UserConvertor {
             .username(user.getUsername())
             .password(user.getPassword())
             .enabled(user.getEnabled())
-            .authorities("")
+            .authorities(new ArrayList<Role>())
             .build();
     }
 
