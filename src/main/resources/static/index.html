@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="api/public/assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="api/public/css/styles.css" rel="stylesheet" />
+    <link href="api/public/css/vkusvillSection.css" rel="stylesheet" />
     <!-- Core theme JS-->
     <script src="api/public/js/scripts.js"></script>
 
@@ -33,36 +34,30 @@
     <script src="api/public/libs/jquery-3.6.0.js"></script>
 </head>
 
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)) fixed;
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)) ;
 background-size: 100% 100%; " >
-
 
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end border-dark bg-dark" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom  border-dark bg-dark text-white">
                 <div class="d-flex flex-row">
-                    <div class="pe-2">
-                        <img class="bg-light rounded p-1" src="img/bank.svg" width="40" height="40">
-                    </div>
                     <div class="d-flex align-self-center">
-                        <p class="m-0">Lorem ipsum</p>
+                        <p class="m-0">Observatio</p>
                     </div>
                 </div>
             </div>
 
 
             <div class="list-group list-group-flush">
-                <div id="News-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white" href="#!">
+                <div id="News-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white section_button" href="#!">
                     <div class="d-flex flex-row align-items-center">
-                        <p class="m-0 flex-grow-1 ">News</p>
-                        <img src="img/arrow-right.svg" class="bg-light rounded" alt="Arrow right" width="20" height="20">
+                        <p class="m-0 flex-grow-1 section_name_text">Vkusvill</p>
                     </div>
                 </div>
-                <div id="Chat-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white" href="#!">
+                <div id="Chat-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white section_button" href="#!">
                     <div class="d-flex flex-row align-items-center">
-                        <p class="m-0 flex-grow-1 ">Chat</p>
-                        <img src="img/arrow-right.svg" class="bg-light rounded" alt="Arrow right" width="20" height="20">
+                        <p class="m-0 flex-grow-1 section_name_text">Lorem ipsum</p>
                     </div>
 
                 </div>
@@ -93,14 +88,119 @@ background-size: 100% 100%; " >
                 </div>
             </nav>
             <!-- Page content-->
-            <div id="page-content" class="container-fluid flex-grow-1 d-flex p-0">
-                <div style=" z-index: -99;" class="container-fluid p-0">
+            <div style="position: relative" id="page-content" class="container-fluid flex-grow-1 d-flex p-0">
+
+                <!-- Background video + shadow -->
+                <div style="position: absolute ; z-index: -99; width: 100%; height: 100%;" class="container-fluid p-0">
                     <iframe  style="width: 100%; height: 100%"
-                            src="https://www.youtube.com/embed/eTD0WWFIDAg?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop">
+                             src="https://www.youtube.com/embed/eTD0WWFIDAg?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop">
                     </iframe>
                 </div>
-                <div style=" position: fixed; z-index: -98; width: 100%; height: 100%; background: rgba(0,0,0,0.37)" class="container-fluid p-0" >
+                <div style=" position: fixed; z-index: -98; width: 100%; height: 100%; background: rgba(0,0,0,0.5)" class="container-fluid p-0" >
                 </div>
+
+                <!-- End background video + shadow -->
+
+                <!-- Content Section -->
+                <div class="container-fluid m-2 mt-4 mb-0" style="background: rgba(0,0,0,0.5)">
+
+                    <!-- Navs with delivery addresses -->
+                    <div class="d-flex flex-wrap align-content-start rounded-top pt-1 bg-dark-vkusvill">
+
+                        <ul class="nav">
+                            <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                                <a class="nav-link" href="#">Disabled</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- End Navs with delivery addresses -->
+
+                    <!-- Dropdown with favorite products list -->
+                    <div class="dropdown dropend rounded-0 ">
+                        <button type="button" class="btn dropdown-toggle box-shadow-dark rounded-0  border-0 border-top border-vkusvill-dark bg-dark-vkusvill text-white" data-bs-toggle="dropdown">
+                            Fav. products list
+                        </button>
+                        <ul class="dropdown-menu bg-dark-vkusvill">
+                            <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 1</a></li>
+                            <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 2</a></li>
+                            <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 3</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Dropdown with favorite products list -->
+
+                    <!-- Meal products list -->
+                    <div class="list-group d-flex flex-wrap mt-2 ">
+                        <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                            <div class="d-flex">
+                                <img class="rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                                     style="width: 50px; height: 50px">
+                                <div class="m-0 ps-2 flex-grow-1">
+                                    <h5 class="m-0">First item</h5>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <h5>Price: 500 rub</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-success align-self-center">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                            <div class="d-flex">
+                                <img class="rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                                     style="width: 50px; height: 50px">
+                                <div class="m-0 ps-2 flex-grow-1">
+                                    <h5 class="m-0">Second item</h5>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                    <h5>Price: 500 rub</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-success align-self-center">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                            <div class="d-flex">
+                                <img class="rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                                     style="width: 50px; height: 50px">
+                                <div class="m-0 ps-2 flex-grow-1">
+                                    <h5 class="m-0">Third item</h5>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <h5>Price: 500 rub</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-success align-self-center">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <!-- End Meal products list -->
+
+                </div>
+                <!-- End Content Section -->
+
             </div>
         </div>
     </div>

@@ -1,12 +1,12 @@
 
     function sendAuthRequest(){
 
-        var fa = $("#username").val();
-        var aa = $("#password").val();
+        var login = $("#username").val();
+        var password = $("#password").val();
 
         var authReqObject = {
-            username: fa,
-            password: aa
+            username: login,
+            password: password
         }
 
         var xhttp = new XMLHttpRequest();
