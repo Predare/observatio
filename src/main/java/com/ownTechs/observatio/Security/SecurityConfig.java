@@ -76,7 +76,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             )
             .and()
             .formLogin()
-            .defaultSuccessUrl("/")
+            .defaultSuccessUrl("/index.html")
             .and();
 
         // Set permissions on endpoints

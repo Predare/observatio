@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        $(function(){
+            $('#templateSpace').load('html/templates/Vkusvill/address_template.html');
+            $('#templateSpace').load('html/templates/Vkusvill/lists_slot_template.html');
+            $('#templateSpace').load('html/templates/Vkusvill/meal_slot_template.html');
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="templateSpace"></div>
+
+    <div class="container-fluid m-2 mt-4 mb-0" style="background: rgba(0,0,0,0.5)">
+
+        <!-- Navs with delivery addresses -->
+        <div class="d-flex flex-wrap align-content-start rounded-top pt-1 bg-dark-vkusvill">
+
+            <ul id="delivery-addresses-list" class="nav">
+                <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item border-end-2 border-vkusvill-dark rounded-top nav-vkusvill mt-1 mb-1">
+                    <a class="nav-link" href="#">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End Navs with delivery addresses -->
+
+        <!-- Dropdown with favorite products list -->
+        <div class="dropdown dropend rounded-0 ">
+            <button id="chose-meal-list" type="button" class="btn dropdown-toggle box-shadow-dark rounded-0  border-0 border-top border-vkusvill-dark bg-dark-vkusvill text-white" data-bs-toggle="dropdown">
+                Fav. products list
+            </button>
+            <ul id="another-meal-lists" class="dropdown-menu bg-dark-vkusvill">
+                <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 1</a></li>
+                <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 2</a></li>
+                <li><a class="dropdown-item dropdown-item-vkusvill text-white" href="#">List 3</a></li>
+            </ul>
+        </div>
+        <!-- End Dropdown with favorite products list -->
+
+        <!-- Meal products list -->
+        <div id="meals-list" class="list-group d-flex flex-wrap mt-2 ">
+            <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                <div class="d-flex">
+                    <img class="meal-image rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                         style="width: 50px; height: 50px">
+                    <div class="m-0 ps-2 flex-grow-1">
+                        <h5 class="meal-name m-0">First item</h5>
+                        <p class="meal-describe m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h5 class="meal-price">Price: 500 rub</h5>
+                    </div>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-success align-self-center">Add</button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                <div class="d-flex">
+                    <img class="rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                         style="width: 50px; height: 50px">
+                    <div class="m-0 ps-2 flex-grow-1">
+                        <h5 class="m-0">Second item</h5>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <h5>Price: 500 rub</h5>
+                    </div>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-success align-self-center">Add</button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item  bg-light-vkusvill text-white text-white-vkusvill pt-1 pb-1 ps-1">
+                <div class="d-flex">
+                    <img class="rounded" src="https://img.bestrecipes.com.au/GmWTemLJ/w643-h428-cfill-q90/br/2019/02/1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg"
+                         style="width: 50px; height: 50px">
+                    <div class="m-0 ps-2 flex-grow-1">
+                        <h5 class="m-0">Third item</h5>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h5>Price: 500 rub</h5>
+                    </div>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-success align-self-center">Add</button>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <!-- End Meal products list -->
+
+    </div>
+</body>
+</html>
